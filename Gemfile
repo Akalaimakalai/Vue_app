@@ -28,9 +28,30 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# ===MY GEMS===
+
+# Authentication
+gem 'devise'
+
+# ---end---
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # === MY GEMS ===
+
+  # Tests
+  gem 'rspec-rails'
+  # Factories
+  gem 'factory_bot_rails'
+  # Library for stubbing and setting expectations on HTTP requests in Ruby.
+  gem 'webmock'
+  # Upgraded byebug (binding.pry)
+  gem 'pry-rails'
+  gem 'pry-byebug'
+
+  # ---END---
 end
 
 group :development do
@@ -40,6 +61,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # ===MY GEMS===
+
+  # Auto opening letters from ActionMailer
+  gem "letter_opener"
+
+  # ---END---
 end
 
 group :test do
@@ -48,6 +76,18 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  # ===MY GEMS===
+
+  # Test validations, associations, etc.
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
+  # Byebug for tests (save_and_open_page)
+  gem 'launchy'
+  # Opening letters in tests
+  gem 'capybara-email'
+
+  # ---END---
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
