@@ -28,3 +28,10 @@
 rubocop_pre_commit_hook.rb
 .rubocop.yml
 # ---END---
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
